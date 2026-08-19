@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://garuva.rathunde.com/sitemap.xml

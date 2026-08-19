@@ -1,0 +1,49 @@
+.urbanism{background:var(--cream)}
+.validation-banner{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.validation-banner span{display:block;text-transform:uppercase;letter-spacing:.15em;font-size:10px;color:#7d8983;margin-bottom:12px}
+.validation-banner strong{font:600 25px/1.35 Manrope}
+.validation-banner p{margin:0;color:var(--muted);line-height:1.7}
+.zoning-metrics{display:grid;grid-template-columns:repeat(6,1fr);margin:45px 0}
+.zoning-metrics article{padding:0 20px;border-left:1px solid var(--line)}
+.zoning-metrics article:first-child{border:0;padding-left:0}
+.zoning-metrics span{display:block;color:#76817c;font-size:11px;min-height:32px}
+.zoning-metrics strong{display:block;font:600 29px Manrope;margin-top:10px}
+.legal-notice{display:grid;grid-template-columns:.35fr .65fr;gap:40px;background:var(--deep);color:white;padding:28px 34px}
+.legal-notice strong{font:600 16px Manrope}
+.legal-notice p{margin:0;color:#a8b5b0;font-size:13px;line-height:1.65}
+.technical-note{font-size:11px;color:#69736e;line-height:1.6;margin:22px 0 0}
+.property-map{margin:0;background:#172321;padding:10px}
+.property-map{height:405px;overflow:hidden;position:relative}
+.property-map img{display:block;width:120%;height:auto;max-width:none;transform:translate(-8.3%,-116px)}
+.property-map figcaption{position:absolute;left:10px;right:10px;bottom:8px;background:#172321;padding:12px 8px 5px}
+.property-map figcaption{padding:12px 8px 5px;color:#a8b3af;font-size:10px;line-height:1.5}
+.ports{background:#14211f;color:white}
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.port-grid article{padding:38px 40px 20px 0;min-height:260px;display:flex;flex-direction:column}
+.port-grid article+article{border-left:1px solid rgba(255,255,255,.14);padding-left:40px}
+.port-grid span{font-size:11px;color:#82928c}
+.port-grid h3{font:600 24px Manrope;margin:40px 0 10px}
+.port-grid p{color:#a3b0ab;font-size:14px;line-height:1.65}
+.port-grid small{margin-top:auto;text-transform:uppercase;letter-spacing:.13em;color:var(--lime);font-size:9px}
+.route-note{font-size:10px;color:#7f8d88;margin-top:35px}
+.drone{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:center}
+.drone-copy>p:last-child{color:var(--muted);line-height:1.7}
+.video-placeholder{height:430px;background:linear-gradient(135deg,#22332f,#0d1918);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;overflow:hidden}
+.video-placeholder:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:45px 45px}
+.video-placeholder>*{position:relative}
+.video-placeholder .play{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:var(--deep);padding-left:4px;margin-bottom:10px}
+.video-placeholder small{color:#8e9d97}
+.video-frame{background:var(--deep);padding:10px;box-shadow:0 24px 55px rgba(20,32,29,.16)}
+.video-frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#08100f}
+.video-note{display:block;color:#7a8580;margin-top:20px;font-size:11px}
+.sources{display:flex;gap:20px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:55px;padding-top:24px;font-size:10px}
+.sources strong{text-transform:uppercase;letter-spacing:.14em;margin-right:auto}
+.sources a{text-decoration:underline;color:#59655f}
+.hero-map{height:150px;position:relative;overflow:hidden;background:#142421}
+.hero-map img{width:122%;height:auto;max-width:none;transform:translate(-9%,-66px);filter:saturate(.78) contrast(1.06) brightness(.82)}
+.hero-map:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(200,223,99,.24)}
+.hero-map span{position:absolute;left:12px;bottom:10px;background:rgba(8,16,15,.85);color:white;padding:6px 9px;text-transform:uppercase;letter-spacing:.12em;font-size:8px;z-index:2}
+.use-icon{height:115px;margin:45px 0 20px;display:flex;align-items:center}
+.use-icon svg{width:120px;height:90px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.78}
+@media(max-width:900px){.drone,.validation-banner,.legal-notice{grid-template-columns:1fr;gap:45px}.zoning-metrics{grid-template-columns:repeat(3,1fr);row-gap:35px}.zoning-metrics article:nth-child(4){border-left:0;padding-left:0}.port-grid{grid-template-columns:1fr}.port-grid article+article{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0}}
+@media(max-width:600px){.zoning-metrics{grid-template-columns:1fr 1fr}.zoning-metrics article:nth-child(odd){border-left:0;padding-left:0}.legal-notice{padding:24px}.video-placeholder{height:300px}.property-map{padding:6px}}
