@@ -140,14 +140,20 @@
         <h2>Vamos avaliar<br>esta oportunidade?</h2>
         <p>Preencha os dados para manifestar interesse e solicitar o portfólio completo.</p>
       </div>
-      <form id="lead-form" novalidate>
+      <form id="lead-form" action="https://formsubmit.co/leo@rathunde.com" method="POST">
+        <input type="hidden" name="_subject" value="Novo interessado — Área logística Garuva">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://garuva.rathunde.com/obrigado.html">
+        <input type="hidden" name="_url" value="https://garuva.rathunde.com/">
+        <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
         <div class="form-row"><label>Nome completo<input name="nome" autocomplete="name" required></label><label>Empresa<input name="empresa" autocomplete="organization" required></label></div>
         <div class="form-row"><label>E-mail corporativo<input name="email" type="email" autocomplete="email" required></label><label>Telefone / WhatsApp<input name="telefone" type="tel" autocomplete="tel" required></label></div>
         <label>Perfil de interesse<select name="perfil" required><option value="">Selecione</option><option>Operador logístico</option><option>Incorporadora / desenvolvedora</option><option>Fundo / investidor institucional</option><option>Indústria</option><option>Outro</option></select></label>
         <label>Mensagem <span>(opcional)</span><textarea name="mensagem" rows="3" placeholder="Conte-nos brevemente sobre a sua busca."></textarea></label>
-        <label class="consent"><input type="checkbox" required><span>Concordo em ser contatado sobre esta oportunidade e com o tratamento dos dados para essa finalidade.</span></label>
+        <label class="consent"><input type="checkbox" name="Consentimento" value="Concordou" required><span>Concordo em ser contatado sobre esta oportunidade e com o tratamento dos dados para essa finalidade.</span></label>
         <button class="button submit" type="submit">Solicitar portfólio <span>↗</span></button>
-        <p class="form-status" aria-live="polite"></p>
+        <p class="form-status" aria-live="polite">Seus dados serão usados somente para o contato sobre esta oportunidade.</p>
       </form>
     </section>
   </main>

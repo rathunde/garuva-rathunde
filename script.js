@@ -4,13 +4,16 @@ const form = document.getElementById('lead-form');
 const status = form.querySelector('.form-status');
 
 form.addEventListener('submit', (event) => {
-  event.preventDefault();
   if (!form.checkValidity()) {
+    event.preventDefault();
     form.reportValidity();
     status.textContent = 'Revise os campos obrigatórios para continuar.';
     return;
   }
-  status.textContent = 'Formulário validado. Na publicação, conecte-o ao e-mail ou CRM responsável.';
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+  button.textContent = 'Enviando…';
+  status.textContent = 'Enviando sua solicitação com segurança…';
 });
 
 const header = document.querySelector('.site-header');
