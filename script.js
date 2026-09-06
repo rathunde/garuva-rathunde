@@ -1,22 +1,23 @@
 document.getElementById('year').textContent = new Date().getFullYear();
-
 const form = document.getElementById('lead-form');
-const status = form.querySelector('.form-status');
-
-form.addEventListener('submit', (event) => {
-  if (!form.checkValidity()) {
-    event.preventDefault();
-    form.reportValidity();
-    status.textContent = 'Revise os campos obrigatórios para continuar.';
-    return;
-  }
+if (form) {
+  const status = form.querySelector('.form-status');
   const button = form.querySelector('button[type="submit"]');
-  button.disabled = true;
-  button.textContent = 'Enviando…';
-  status.textContent = 'Enviando sua solicitação com segurança…';
-});
-
-const header = document.querySelector('.site-header');
-window.addEventListener('scroll', () => {
-  header.style.background = window.scrollY > 30 ? 'rgba(12, 23, 22, .96)' : '#0c1716';
-}, { passive: true });
+  form.addEventListener('submit', (event) => {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      form.reportValidity();
+      status.textContent = 'Confira os campos obrigatórios para continuar.';
+      return;
+    }
+    button.disabled = true;
+    button.textContent = 'Encaminhando…';
+    status.textContent = 'Aguarde o retorno do serviço de envio. Se não concluir, entre em contato por e-mail.';
+    window.setTimeout(() => {
+      button.disabled = false;
+      button.textContent = 'Enviar interesse ↗';
+      status.textContent = 'Se o envio não foi concluído, tente novamente ou escreva para leo@rathunde.com.';
+    }, 15000);
+  });
+  window.addEventListener('pageshow', () => {button.disabled = false;button.textContent = 'Enviar interesse ↗';});
+}
